@@ -50,5 +50,11 @@ And now we can run recentrifuge
 Now let's look at a metatranscriptome from the same sample!
 
 > fastq-dump -X 20000 --split-3 SRR5131969
+
+And now Kraken2
+
 > kraken2 --use-mpa-style --report SRR5131969.report.txt --output SRR5131969.classification.txt --db k2_standard_08gb SRR5131969_1.fastq SRR5131969_2.fastq
+
+and now rcf
+
 > rcf -k SRR5131969.classification.txt --sequential
