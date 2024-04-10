@@ -20,7 +20,7 @@ Then we need to download some data to start processing, using our favorite fastq
 
 And now we can run kraken2 to classify the reads in this metagenome! For best results, make sure to say "release the kraken" when running this tool. 
 
-> kraken2 --use-mpa-style --report SRR5131972.report.txt --output SRR5131972.classification.txt --db k2_standard_08gb SRR5131972_1.fastq SRR5131972_2.fastq
+> kraken2 --use-mpa-style --memory-mapping --report SRR5131972.report.txt --output SRR5131972.classification.txt --db k2_standard_08gb SRR5131972_1.fastq SRR5131972_2.fastq
 
 We can see the classification for each read in the *classification.txt file, and we can see the summarized results in the *report.txt file. 
 
@@ -53,7 +53,7 @@ Now let's look at a metatranscriptome from the same sample!
 
 And now Kraken2
 
-> kraken2 --use-mpa-style --report SRR5131969.report.txt --output SRR5131969.classification.txt --db k2_standard_08gb SRR5131969_1.fastq SRR5131969_2.fastq
+> kraken2 --use-mpa-style --memory-mapping --report SRR5131969.report.txt --output SRR5131969.classification.txt --db k2_standard_08gb SRR5131969_1.fastq SRR5131969_2.fastq
 
 and now rcf
 
